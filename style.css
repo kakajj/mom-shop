@@ -72,3 +72,6 @@ nav{grid-template-columns:repeat(4,minmax(0,1fr));padding:6px 5px calc(6px + env
 :root[data-theme="dark"] input[type=checkbox],:root[data-theme="dark"] input[type=range]{accent-color:#a6e0bf}
 :root[data-theme="dark"] button:focus-visible,:root[data-theme="dark"] input:focus-visible,:root[data-theme="dark"] select:focus-visible,:root[data-theme="dark"] textarea:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .theme-panel .field{margin-bottom:0}.theme-panel .note{margin:0}
+
+/* V1.8.6 */
+.recent-sales .quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.recent-sales .quick button{white-space:normal;overflow-wrap:anywhere;max-width:100%;min-height:44px}
