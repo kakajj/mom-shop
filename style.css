@@ -45,3 +45,30 @@ h3{font-size:1rem}small,.muted,.note,.week-range,.week-detail{font-size:.8125rem
 nav{grid-template-columns:repeat(4,minmax(0,1fr));padding:6px 5px calc(6px + env(safe-area-inset-bottom))}nav button{min-width:0;min-height:56px;font-size:1.25rem;line-height:1.35}nav button span{font-size:.75rem;white-space:normal;overflow-wrap:anywhere;max-width:100%}
 @media(max-width:360px){.tabs{grid-template-columns:1fr}.filterbar select{flex-basis:100%}.itemtext{flex-basis:7rem}}
 @media(max-width:20rem){.inventory-grid,.actions,.stats,.totals{grid-template-columns:1fr}}
+
+/* V1.8.5: explicit palettes, native form controls, no image inversion. */
+:root{color-scheme:only light;--surface:#fff;--muted:#65776d;--danger:#a9342d;--soft:#e7efe6;--control:#cdd9cc;--focus:#397b51}
+:root[data-theme="dark"]{color-scheme:dark;--ink:#edf5ef;--green:#a6e0bf;--paper:#111c18;--line:#40554b;--surface:#203029;--muted:#b8cdc0;--danger:#ffaaa3;--soft:#2b4538;--control:#617a6b;--focus:#b4f2ca}
+:root[data-theme="dark"] body{background:radial-gradient(ellipse at 50% 0,#223b30 0,transparent 420px)}
+:root[data-theme="dark"] .panel,:root[data-theme="dark"] .stats>div,:root[data-theme="dark"] nav,:root[data-theme="dark"] dialog{background:var(--surface);color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] small,:root[data-theme="dark"] .muted,:root[data-theme="dark"] .note,:root[data-theme="dark"] header small,:root[data-theme="dark"] .empty,:root[data-theme="dark"] .week-range,:root[data-theme="dark"] .week-detail{color:var(--muted)}
+:root[data-theme="dark"] .hero{background:linear-gradient(125deg,#174c3b,#21664e);color:#fff;border-color:#51856d;box-shadow:none}
+:root[data-theme="dark"] .hero small{color:#e0f0e6}
+:root[data-theme="dark"] .btn.primary{background:#a6e0bf;color:#10291d}
+:root[data-theme="dark"] .btn.secondary,:root[data-theme="dark"] .quick button,:root[data-theme="dark"] .refresh-app,:root[data-theme="dark"] .datebar button{background:var(--soft);color:var(--ink);border-color:var(--control)}
+:root[data-theme="dark"] .btn.expense,:root[data-theme="dark"] .btn.danger,:root[data-theme="dark"] .thumb.red{background:#50312f;color:var(--danger)}
+:root[data-theme="dark"] .amount,:root[data-theme="dark"] .stock-count,:root[data-theme="dark"] .repeat,:root[data-theme="dark"] .edit{color:var(--green)}
+:root[data-theme="dark"] .amount.red,:root[data-theme="dark"] .stock-count.red,:root[data-theme="dark"] .direct-delete,:root[data-theme="dark"] .week-compare strong.week-down{color:var(--danger)!important}
+:root[data-theme="dark"] .thumb,:root[data-theme="dark"] .stock-photo,:root[data-theme="dark"] .week-compare,:root[data-theme="dark"] .rank,:root[data-theme="dark"] .stepper button,:root[data-theme="dark"] #calc,:root[data-theme="dark"] .dialog-head button{background:var(--soft);color:var(--green)}
+:root[data-theme="dark"] input:not([type=checkbox]):not([type=range]),:root[data-theme="dark"] select,:root[data-theme="dark"] textarea,:root[data-theme="dark"] #search{background:#17261f!important;color:var(--ink);border-color:var(--control)!important}
+:root[data-theme="dark"] input::placeholder,:root[data-theme="dark"] textarea::placeholder{color:#a9bfb1;opacity:1}
+:root[data-theme="dark"] .item,:root[data-theme="dark"] .summaryrow,:root[data-theme="dark"] .dialog-head{border-color:var(--line)}
+:root[data-theme="dark"] nav button{color:var(--muted)}
+:root[data-theme="dark"] nav button.active{background:#365847;color:#d9fbe6}
+:root[data-theme="dark"] .line-share{background:#294a39!important;border-color:#577866!important;color:#c9f3d9!important}
+:root[data-theme="dark"] .bar{background:#394e43}:root[data-theme="dark"] .bar i{background:#83cda2}
+:root[data-theme="dark"] #toast{background:#dbf1e3;color:#15271c}
+:root[data-theme="dark"] .sound-toggle input:checked{background:#45956b}
+:root[data-theme="dark"] input[type=checkbox],:root[data-theme="dark"] input[type=range]{accent-color:#a6e0bf}
+:root[data-theme="dark"] button:focus-visible,:root[data-theme="dark"] input:focus-visible,:root[data-theme="dark"] select:focus-visible,:root[data-theme="dark"] textarea:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.theme-panel .field{margin-bottom:0}.theme-panel .note{margin:0}
